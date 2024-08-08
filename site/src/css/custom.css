@@ -60,6 +60,7 @@ html {
 
 .navbar__inner {
   flex-wrap: unset;
+  display: none;
 }
 
 .navbar__title {
@@ -81,9 +82,9 @@ html[data-theme='dark'] {
   --ifm-menu-color-background-active: rgb(57, 68, 64);
   --ifm-menu-color-background-hover: rgb(57, 68, 64);
 }
-.navbar .navbar__search .navbar__search-input {
+/* .navbar .navbar__search .navbar__search-input {
   font-weight: 300;
-}
+} */
 
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
@@ -538,4 +539,11 @@ html[data-theme='dark'] .api-description {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+/* display none */
+/* remove navbar */
+
+.navbar{
+display: none;
 }
