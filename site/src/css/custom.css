@@ -60,7 +60,7 @@ html {
 
 .navbar__inner {
   flex-wrap: unset;
-  display: none;
+ 
 }
 
 .navbar__title {
@@ -540,10 +540,4 @@ html[data-theme='dark'] .api-description {
   bottom: 0;
   right: 0;
 }
-
-/* display none */
-/* remove navbar */
-
-.navbar{
-display: none;
-}
+ 

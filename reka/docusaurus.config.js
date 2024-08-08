@@ -23,39 +23,13 @@ module.exports = {
     prism: {
       theme: require('prism-react-renderer/themes/shadesOfPurple'),
     },
-    // navbar: {
-    //   hideOnScroll: false,
-    //   title: 'craft.js',
-    //   items: [
-    //     {
-    //       to: 'docs/overview',
-    //       label: 'Documentation',
-    //       activeBasePath: `docs`,
-    //       position: 'left',
-    //     },
-    //     // TODO: create an /examples page in Docusaurus
-    //     {
-    //       label: 'Examples',
-    //       position: 'right',
-    //       items: [
-    //         {
-    //           to: 'pathname:///examples/landing',
-    //           label: 'Landing',
-    //         },
-    //         {
-    //           to: 'pathname:///examples/basic',
-    //           label: 'Basic',
-    //         },
-    //       ],
-    //     },
-    //     { to: 'docs/sponsor', label: 'Sponsor', position: 'right' },
-    //     {
-    //       href: 'https://github.com/prevwong/craft.js',
-    //       label: 'GitHub',
-    //       position: 'right',
-    //     },
-    //   ],
-    // },
+    navbar: {
+      hideOnScroll: false,
+      title: 'webtir-dev',
+      items: [
+        
+      ],
+    },
     footer: {
       style: 'light',
       links: [
