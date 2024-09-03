@@ -1,5 +1,8 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { useRouter } from "next/navigation";
+
+export default function Editor() {
+  const router = useRouter();
   return <div>Hello</div>;
 }
