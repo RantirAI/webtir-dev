@@ -1,0 +1,18 @@
+/* public/styles/global.css */
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~boxicons/css/boxicons.min.css';
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.canvas div:hover {
+  outline: 2px dashed #007bff;
+}

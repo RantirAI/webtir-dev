@@ -1,5 +1,5 @@
 {
-  "name": "@webtir/frontend",
+  "name": "my-site-builder",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@craftjs/core": "^0.2.10",
+    "@craftjs/layers": "^0.2.5",
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "@rekajs/core": "^0.1.30",
+    "@rekajs/react": "^0.1.4",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.6",
+    "boxicons": "^2.1.4",
+    "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.7"
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.7"
+    "eslint-config-next": "14.2.7",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5"
   }
 }
