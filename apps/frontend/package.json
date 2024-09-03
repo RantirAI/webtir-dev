@@ -13,6 +13,7 @@
     "@radix-ui/react-icons": "^1.3.0",
     "@rekajs/core": "^0.1.30",
     "@rekajs/react": "^0.1.4",
+    "@rekajs/types": "^0.1.23",
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",

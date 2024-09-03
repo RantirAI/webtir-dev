@@ -2,6 +2,7 @@ import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import React from "react";
 import { TbTextSize } from "react-icons/tb";
+import { TextBlock } from "./text-block";
 export const AccordionTrigger = (props: Accordion.AccordionTriggerProps) => {
   const { children, className, ...rest } = props;
   return (
@@ -41,7 +42,7 @@ export const BlockTools = () => (
         Block
       </AccordionTrigger>
       <AccordionContent>
-        <button>Add Text</button>
+        <TextBlock />
       </AccordionContent>
     </Accordion.Item>
   </Accordion.Root>
