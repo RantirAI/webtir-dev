@@ -3,7 +3,11 @@
 import { useReka } from "@rekajs/react";
 import { Type } from "@rekajs/types";
 import { useEffect, useState } from "react";
-
+/**
+ * 
+ * Temporary solution need to remove this when we
+ * have a better understanding of the libraries.
+ */
 export const ComponentList = () => {
   const { reka } = useReka();
   const [component, setComponent] = useState<Type[]>([]);
@@ -16,7 +20,6 @@ export const ComponentList = () => {
       <h3 className=" mb-4">Components</h3>
       <div className="space-y-2">
         {compontents.map((i) => {
-          console.log(i);
           return <p>{i}</p>;
         })}
       </div>
