@@ -7,7 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="p-5 bg-[#F5F6F7]">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
