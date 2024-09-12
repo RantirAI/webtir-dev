@@ -38,7 +38,7 @@ export const EditorView = () => {
   const [show, setShow] = createSignal(false);
 
   const frame = reka.createFrame({
-    id: "first-app",
+    id: "first-app-2",
     component: {
       name: "App",
       external: undefined,
@@ -56,7 +56,7 @@ export const EditorView = () => {
   });
 
   return (
-    <div class="w-full p-5">
+    <div class="w-full p-5 rounded-sm bg-white mt-5 overflow-auto">
       <p>Please press d to update the editor.</p>
       {show() && (
         <div class="w-fit mx-auto">

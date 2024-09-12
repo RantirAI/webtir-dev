@@ -4,8 +4,11 @@ import { Sidebar } from "~/components/side-bar";
 import { Reka } from "@rekajs/core";
 import { RekaContext } from "~/lib/reka-solidjs";
 import * as t from "@rekajs/types";
-import { children } from "solid-js/types/server/reactive.js";
-export default function Editor() {
+import { ActiveSection } from '../components/active-section/active-section';
+import { createSignal } from "solid-js";
+export default function App() {
+  const [activeLink, setactiveLink] = createSignal("components")
+
   const reka = Reka.create();
   reka.load(
     t.state({
@@ -30,10 +33,8 @@ export default function Editor() {
     <div class="min-h-screen">
       <RekaContext.Provider value={reka}>
         <Header />
-        <div class="flex">
-          <Sidebar />
-          <EditorView />
-        </div>
+        <Sidebar setactiveLink={setactiveLink} activeLink={activeLink} />
+        <ActiveSection activeLink={activeLink} />
       </RekaContext.Provider>
     </div>
   );
