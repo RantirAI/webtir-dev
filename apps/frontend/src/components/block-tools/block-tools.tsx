@@ -28,6 +28,10 @@ export default function BlockTools() {
                 <BoxIcon></BoxIcon>
                 <span class="text-xs">Container</span>
             </button>
+            <button onclick={addContainer}  class="hover:bg-slate-300 w-14 h-14 rounded-sm shadow-md flex items-center flex-col p-2 justify-between outline-none">
+                <BoxIcon></BoxIcon>
+                <span class="text-xs">Container</span>
+            </button>
         </div>
     )
 
