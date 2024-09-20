@@ -1,4 +1,4 @@
-import { createEffect, createSignal, useContext } from "solid-js";
+import { createSignal, useContext } from "solid-js";
 import { RekaContext } from "./provider";
 import * as t from "@rekajs/types";
 
@@ -18,6 +18,6 @@ export const useRekaState = () => {
   }
 
   const [rekaState] = createSignal<t.State>(reka.state);
-
+  
   return rekaState;
 };

@@ -8,7 +8,7 @@ import {
 import { useRekaState } from "~/lib/reka-solidjs";
 import { prettyPrintJson } from "pretty-print-json";
 export const JsonState = () => {
-  const state = useRekaState();
+  // const state = useRekaState();
   return (
     <div>
       <Dialog>
@@ -17,9 +17,9 @@ export const JsonState = () => {
           <DialogHeader>
             <DialogTitle>Reka structure</DialogTitle>
           </DialogHeader>
-          <div class="text-sm">
+          {/* <div class="text-sm">
             <pre innerHTML={prettyPrintJson.toHtml(state())}></pre>
-          </div>
+          </div> */}
         </DialogContent>
       </Dialog>
     </div>

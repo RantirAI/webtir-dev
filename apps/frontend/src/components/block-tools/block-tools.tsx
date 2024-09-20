@@ -3,23 +3,23 @@ import { BoxIcon } from "~/resources";
 import * as t from "@rekajs/types"
 
 export default function BlockTools() {
-    const reka = useReka();
+    // const reka = useReka();
 
     const addContainer = () => {
-        const appComponent = reka.program.components[0];
-        reka.change(() => {
-            //@ts-ignore
-            return appComponent.template.children.push(
-                t.tagTemplate({
-                    tag: "div",
-                    props: {
-                        class: t.literal({
-                            value: "w-full min-h-[200px] bg-red-300 border-b border-white",
-                        }),
-                    },
-                })
-            );
-        });
+        // const appComponent = reka.program.components[0];
+        // reka.change(() => {
+        //     //@ts-ignore
+        //     return appComponent.template.children.push(
+        //         t.tagTemplate({
+        //             tag: "div",
+        //             props: {
+        //                 class: t.literal({
+        //                     value: "w-full min-h-[200px] bg-red-300 border-b border-white",
+        //                 }),
+        //             },
+        //         })
+        //     );
+        // });
     };
     return (
         <div class="p-2">
