@@ -1,4 +1,4 @@
-import { editor } from "@/lib/state";
+import { editor } from "@/lib/editor";
 import { RenderView } from "./render-view";
 
 export const EditorCanvas = () => {

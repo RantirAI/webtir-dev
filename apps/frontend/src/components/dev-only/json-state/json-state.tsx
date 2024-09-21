@@ -5,7 +5,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { reka } from "@/lib/state";
+import { editor } from "@/lib/editor";
 import { prettyPrintJson } from "pretty-print-json";
 import { TbTerminal2 } from "solid-icons/tb";
 
@@ -21,7 +21,7 @@ export const JsonState = () => {
             <DialogTitle>Reka structure</DialogTitle>
           </DialogHeader>
           <div class="text-sm">
-            <pre innerHTML={prettyPrintJson.toHtml(reka.toJSON())}></pre>
+            <pre innerHTML={prettyPrintJson.toHtml(editor.reka.toJSON())}></pre>
           </div>
         </DialogContent>
       </Dialog>

@@ -1,4 +1,3 @@
-import { state } from "@/lib/state";
 import { Header } from "../header";
 import { LeftPanel } from "./left-panel";
 import { EditorCanvas } from "./editor-canvas";
