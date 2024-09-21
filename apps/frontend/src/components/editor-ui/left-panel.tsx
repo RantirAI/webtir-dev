@@ -1,4 +1,4 @@
-import { addContainer } from "@/lib/editor";
+import { addContainer, addLink, addTextToTheFirstContainer } from "@/lib/editor";
 
 export const LeftPanel = (param: { class?: string }) => {
   return (
@@ -7,9 +7,9 @@ export const LeftPanel = (param: { class?: string }) => {
         param.class ?? ""
       } w-[319px] h-screen overflow-hidden bg-white border-r flex gap-5 flex-col p-5`}
     >
-      <button>Text</button>
+      <button onClick={addTextToTheFirstContainer}>Text</button>
       <button onClick={addContainer}>Container</button>
-      <button>Link</button>
+      <button onClick={addLink}>Link</button>
     </div>
   );
 };

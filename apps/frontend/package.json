@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "postcss": "^8.4.38",
     "pretty-print-json": "^3.0.2",
+    "solid-icons": "^1.1.0",
     "solid-js": "^1.8.18",
     "solid-transition-group": "^0.2.3",
     "tailwind-merge": "^2.5.2",

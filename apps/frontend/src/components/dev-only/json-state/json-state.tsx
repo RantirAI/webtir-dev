@@ -4,22 +4,25 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "~/components/ui/dialog";
-import { useRekaState } from "~/lib/reka-solidjs";
+} from "@/components/ui/dialog";
+import { reka } from "@/lib/state";
 import { prettyPrintJson } from "pretty-print-json";
+import { TbTerminal2 } from "solid-icons/tb";
+
 export const JsonState = () => {
-  // const state = useRekaState();
   return (
     <div>
       <Dialog>
-        <DialogTrigger class="text-white">State</DialogTrigger>
+        <DialogTrigger class="text-white">
+          <TbTerminal2 class="text-primary-black text-xl" />
+        </DialogTrigger>
         <DialogContent class="w-[90vw] h-[90vh] bg-primary-black text-white">
           <DialogHeader>
             <DialogTitle>Reka structure</DialogTitle>
           </DialogHeader>
-          {/* <div class="text-sm">
-            <pre innerHTML={prettyPrintJson.toHtml(state())}></pre>
-          </div> */}
+          <div class="text-sm">
+            <pre innerHTML={prettyPrintJson.toHtml(reka.toJSON())}></pre>
+          </div>
         </DialogContent>
       </Dialog>
     </div>

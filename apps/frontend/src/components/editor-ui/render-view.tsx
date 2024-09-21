@@ -6,6 +6,7 @@ export const RenderView = ({ view }: { view: t.View }) => {
     if (view.tag == "text") {
       return <span>{view.props.value}</span>;
     }
+    console.log(view.tag);
     return (
       <Dynamic
         component={view.tag}
