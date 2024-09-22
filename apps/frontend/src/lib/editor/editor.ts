@@ -53,6 +53,7 @@ export class Editor {
   setActiveNode(id: string) {
     const node = this.reka.getNodeFromId(id);
     this.activeNode = node;
+    console.log("active Node");
   }
 
   /**

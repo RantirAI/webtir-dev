@@ -21,7 +21,7 @@ export const AccordionItem = <T extends ValidComponent = "div">(
 	const [local, rest] = splitProps(props as accordionItemProps, ["class"]);
 
 	return (
-		<AccordionPrimitive.Item class={cn("border-b", local.class)} {...rest} />
+		<AccordionPrimitive.Item class={cn("", local.class)} {...rest} />
 	);
 };
 

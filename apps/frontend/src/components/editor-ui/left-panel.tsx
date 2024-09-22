@@ -1,5 +1,5 @@
 import { editor } from "@/lib/editor";
-import { RenderTemplateNode } from "../template-node";
+import { ComponentTree, RenderTemplateNode } from "../template-node";
 import { Show } from "solid-js";
 import Blocks from "../block/accordion";
 
@@ -14,7 +14,7 @@ export const LeftPanel = (param: { class?: string }) => {
       <Blocks />
 
       <Show when={rootTemplateId}>
-        <RenderTemplateNode templateId={rootTemplateId!} />
+        <ComponentTree templateId={rootTemplateId!} />
       </Show>
     </div>
   );

@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        "esm": "0.7rem",
+        "esm": "0.75rem",
       },
       colors: {
         border: "hsl(var(--border))",
