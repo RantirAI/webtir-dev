@@ -2,11 +2,11 @@ import { Dynamic } from "solid-js/web";
 import * as t from "@rekajs/types";
 
 export const RenderView = ({ view }: { view: t.View }) => {
+  console.log("renderring...");
   if (view instanceof t.TagView) {
     if (view.tag == "text") {
-      return <span>{view.props.value}</span>;
+      return <>{view.props.value}</>;
     }
-    console.log(view.tag);
     return (
       <Dynamic
         component={view.tag}

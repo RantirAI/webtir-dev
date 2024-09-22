@@ -6,6 +6,7 @@ export class Editor {
   declare reka: Reka;
   declare frame: Frame;
   declare frameId: string;
+  declare activeNode: any;
 
   constructor() {
     this.reka = Reka.create();
@@ -39,6 +40,40 @@ export class Editor {
     return this.reka.program.components.find((i) => i.name === name);
   }
 
+  get root() {
+    const root = this.getComponentsByName("App");
+
+    if (!root) {
+      throw new Error("No root was found.");
+    }
+
+    return root;
+  }
+
+  setActiveNode(id: string) {
+    const node = this.reka.getNodeFromId(id);
+    this.activeNode = node;
+  }
+
+  /**
+   * Adds header to the selected component.
+   */
+  addHeader() {
+    if (!this.activeNode) {
+      return;
+    }
+
+    if (t.is(this.activeNode, t.SlottableTemplate)) {
+      console.log("text" in this.activeNode.props);
+      this.reka.change(() => {
+        (this.activeNode as t.SlottableTemplate).props.text = t.literal({
+          value: "Header 812",
+        });
+      });
+    } else {
+      console.log("nope");
+    }
+  }
   private init() {
     return t.state({
       program: t.program({
@@ -49,12 +84,34 @@ export class Editor {
               tag: "section",
               props: {
                 class: t.literal({
-                  value: "w-full min-h-[50vh] bg-white",
+                  value:
+                    "w-full min-h-[50vh] bg-white flex items-center justify-center",
                 }),
               },
+              children: [
+                t.tagTemplate({
+                  tag: "h1",
+                  props: {
+                    class: t.literal({ value: "text-5xl" }),
+                  },
+                  children: [
+                    t.tagTemplate({
+                      tag: "text",
+                      props: {
+                        value: t.identifier({ name: "text" }),
+                      },
+                    }),
+                  ],
+                }),
+              ],
             }),
             state: [],
-            props: [],
+            props: [
+              t.componentProp({
+                name: "text",
+                init: t.literal({ value: "" }),
+              }),
+            ],
           }),
           t.rekaComponent({
             name: "App",
